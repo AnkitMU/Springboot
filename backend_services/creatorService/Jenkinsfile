@@ -30,16 +30,16 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
+        //stage('Deploy') {
+          //  steps {
                 // Deploy the jar file to a target server
                 // Customize this to your deployment method (e.g., copy jar, SSH, etc.)
-                sh '''
-                scp build/libs/creatorService-1.0.0.jar user@yourserver:/path/to/deploy/
-                ssh user@yourserver "cd /path/to/deploy && nohup java -jar creatorService-1.0.0.jar > log.out 2>&1 &"
-                '''
-            }
-        }
+               // sh '''
+               // scp build/libs/creatorService-1.0.0.jar user@yourserver:/path/to/deploy/
+              //  ssh user@yourserver "cd /path/to/deploy && nohup java -jar creatorService-1.0.0.jar > log.out 2>&1 &"
+              //  '''
+          //  }
+       // }
     }
 
     post {
